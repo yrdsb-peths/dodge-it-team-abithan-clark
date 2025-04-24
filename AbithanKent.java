@@ -9,11 +9,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class AbithanKent extends Actor
 {
     boolean atTop = true;
+    int mouseClicks = 0;
+    
     public void act()
     {
        if(Greenfoot.mouseClicked(null))
        {
            atTop = !atTop;
+           mouseClicks++;
+           String mouseStr = "" + mouseClicks;
+           getWorld().showText(mouseStr, 550, 350);
        }
        if(atTop)
        {
