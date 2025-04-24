@@ -29,5 +29,11 @@ public class AbithanKent extends Actor
            String mouseStr = "" + mouseClicks;
            getWorld().showText(mouseStr, 550, 350);
        }
+       
+       if (mouseClicks == 100)
+       {
+           Crown crown = new Crown();
+           getWorld().addObject(crown, 300, 100);
+       }
     }
 }
