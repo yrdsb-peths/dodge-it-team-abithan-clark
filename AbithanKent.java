@@ -13,13 +13,6 @@ public class AbithanKent extends Actor
     
     public void act()
     {
-       if(Greenfoot.mouseClicked(null))
-       {
-           atTop = !atTop;
-           mouseClicks++;
-           String mouseStr = "" + mouseClicks;
-           getWorld().showText(mouseStr, 550, 350);
-       }
        if(atTop)
        {
            setLocation(100,100);
@@ -27,6 +20,14 @@ public class AbithanKent extends Actor
        else
        {
            setLocation(100,300);
+       }
+       
+       if(Greenfoot.mouseClicked(null))
+       {
+           atTop = !atTop;
+           mouseClicks++;
+           String mouseStr = "" + mouseClicks;
+           getWorld().showText(mouseStr, 550, 350);
        }
     }
 }
